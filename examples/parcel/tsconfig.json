@@ -1,6 +1,14 @@
 {
   "compilerOptions": {
-    "jsx": "react",
-    "jsxFactory": "jsx"
+    "jsx": "react-jsx",
+    "jsxImportSource": "red-otter",
+
+    "strict": true,
+    "target": "ES2015",
+    "lib": ["ESNext", "dom", "ES2015.Iterable"],
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
   }
 }

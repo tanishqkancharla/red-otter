@@ -8,9 +8,12 @@ import packageJson from "./package.json";
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve(__dirname, "src/index.ts"),
+      entry: [
+        resolve(__dirname, "src/index.ts"),
+        resolve(__dirname, "src/jsx-runtime.ts"),
+      ],
       name: packageJson.name,
-      fileName: "index",
+      fileName: (format, entryName) => `${entryName}.js`,
     },
   },
   plugins: [
@@ -20,4 +23,16 @@ export default defineConfig({
       include: ["src"],
     }),
   ],
+  resolve: {
+    alias: [
+      {
+        find: "jsx-runtime",
+        replacement: resolve(__dirname, "src/jsx-runtime.ts"),
+      },
+      {
+        find: "jsx-dev-runtime",
+        replacement: resolve(__dirname, "src/jsx-runtime.ts"),
+      },
+    ],
+  },
 });

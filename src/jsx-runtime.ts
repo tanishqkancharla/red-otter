@@ -1,4 +1,4 @@
-import { Style } from "./Style";
+import { hash } from "./hash";
 import { invariant } from "./invariant";
 import {
   FixedView,
@@ -10,7 +10,7 @@ import {
 } from "./Layout";
 import { parseColor } from "./parseColor";
 import { resolveStylingValues } from "./resolveStylingValues";
-import { hash } from "./hash";
+import { Style } from "./Style";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
@@ -248,3 +248,5 @@ export function jsx(
     }
   }
 }
+
+export const jsxs = jsx;
