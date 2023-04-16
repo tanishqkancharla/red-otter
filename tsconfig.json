@@ -13,9 +13,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-
     "jsx": "react-jsx",
-    "jsxImportSource": ".",
+    "jsxImportSource": "red-otter",
     "baseUrl": "."
   },
   "include": [

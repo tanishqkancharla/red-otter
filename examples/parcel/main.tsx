@@ -5,7 +5,7 @@ import {
   Layout,
   Style,
   TextStyle,
-  TTF
+  TTF,
 } from "../../src";
 
 const zinc = {
@@ -23,6 +23,7 @@ const zinc = {
 
 // Using @parcel/transformer-raw to load the static file (see .parcelrc).
 // @ts-expect-error ts(2307)
+// eslint-disable-next-line import/no-unresolved
 import interUrl from "url:./public/inter.ttf";
 
 async function loadFont(): Promise<Font> {
@@ -31,7 +32,7 @@ async function loadFont(): Promise<Font> {
   // Add font to the document so we will use browser to rasterize the font.
   const fontFace = new FontFace("Inter", `url("${interUrl}")`);
   await fontFace.load();
-  (document.fonts as any).add(fontFace);
+  document.fonts.add(fontFace);
 
   // Download font file for parsing.
   const file = await fetch(interUrl);

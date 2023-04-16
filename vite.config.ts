@@ -26,11 +26,11 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: "jsx-runtime",
+        find: "red-otter/jsx-runtime",
         replacement: resolve(__dirname, "src/jsx-runtime.ts"),
       },
       {
-        find: "jsx-dev-runtime",
+        find: "red-otter/jsx-dev-runtime",
         replacement: resolve(__dirname, "src/jsx-runtime.ts"),
       },
     ],
