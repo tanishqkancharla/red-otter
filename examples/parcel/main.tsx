@@ -6,6 +6,8 @@ import {
   Style,
   TextStyle,
   TTF,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  jsx,
 } from "../../src";
 
 const zinc = {
